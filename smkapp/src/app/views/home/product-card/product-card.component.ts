@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { ProductActionService} from '../../../actions/product-action.service';
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
   @Input() productItem: any;
-  constructor() { }
+  constructor(public productActionService:ProductActionService) { }
 
 
   ngOnInit(): void {
   }
   click(p_:any):void{
-    console.log(p_);
+    this.productActionService.addProductCart(p_);
   }
 }

@@ -1,4 +1,7 @@
+import { ConnectableObservable } from 'rxjs';
+import { StorageService } from './../shared/storage.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public storage:StorageService,private router: Router) { }
 
   ngOnInit(): void {
-  }
 
+  }
+  checkout():void{
+    console.log(this.storage.cartList);
+    this.router.navigate(['/shop']);
+  }
 }
