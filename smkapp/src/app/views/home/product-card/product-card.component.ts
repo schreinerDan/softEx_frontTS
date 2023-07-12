@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -8,10 +6,13 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
-
+  @Input() productItem: any;
   constructor() { }
+
 
   ngOnInit(): void {
   }
-
+  click(p_:any):void{
+    console.log(p_);
+  }
 }
