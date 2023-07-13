@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   }
   checkout():void{
-    console.log(this.storage.cartList);
+
     this.router.navigate(['/shop']);
   }
 }

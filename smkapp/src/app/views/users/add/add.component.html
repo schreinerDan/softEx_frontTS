@@ -1,0 +1,61 @@
+<div class="list">
+
+<mat-card class="form-class">
+  <h1>Adicionar Usuário</h1>
+  <form [formGroup] ='addUserForm' (submit)='createUser()'>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome de Usuário</mat-label>
+      <input matInput formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite sua Senha</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    </p>
+   <p>
+
+     <mat-label>Ativo</mat-label>
+    <input  type="checkbox" formControlNme="is_enabled" checked disabled>
+
+   </p>
+
+   <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Data de Cadastro</mat-label>
+      <input matInput formControlName="register_date" >
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Sobrenome</mat-label>
+      <input matInput formControlName="surname">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Fone</mat-label>
+      <input matInput formControlName="phone">
+    </mat-form-field>
+  </p>
+<div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</div>
+</form>
+</mat-card>
+</div>

@@ -15,6 +15,11 @@ import { HeaderComponent } from './views/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { StorageService } from './views/shared/storage.service';
 import { ProductActionService} from './actions/product-action.service';
+import { ProductItemCartComponent } from './views/shopping-cart/product-item-cart/product-item-cart.component';
+import {ShoppingCartComponent} from './views/shopping-cart/shopping-cart.component';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -23,6 +28,8 @@ import { ProductActionService} from './actions/product-action.service';
     HomeComponent,
     ProductCardComponent,
     HeaderComponent,
+    ProductItemCartComponent,
+    ShoppingCartComponent
 
   ],
   imports: [
@@ -33,7 +40,9 @@ import { ProductActionService} from './actions/product-action.service';
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatListModule,
+    MatGridListModule
 
 
   ],

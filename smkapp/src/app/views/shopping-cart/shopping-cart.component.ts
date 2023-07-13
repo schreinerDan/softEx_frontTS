@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductActionService } from 'src/app/actions/product-action.service';
+import { StorageService } from '../shared/storage.service';
+
+
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,9 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public storage:StorageService,public productActionService:ProductActionService) { }
 
   ngOnInit(): void {
+
+
   }
 
 }

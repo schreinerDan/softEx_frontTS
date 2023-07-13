@@ -1,1 +1,21 @@
-<p>shopping-cart works!</p>
+
+
+
+
+
+<div *ngIf="storage.productsList" class="card-container">
+  <table id="customers">
+    <tr>
+      <th>Item</th>
+      <th>Desc</th>
+      <th>qtd</th>
+      <th>un</th>
+      <th>preco</th>
+      <th>total</th>
+    </tr>
+  <div class="card" *ngFor="let cartItem of storage.shoppingCart ">
+
+    <app-product-item-cart [productItemCart]="cartItem"> </app-product-item-cart>
+ </div>
+  </table>
+ </div>

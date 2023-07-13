@@ -1,3 +1,4 @@
+import { ProductModel} from '../models/product-model';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -11,7 +12,7 @@ export class ProductsService {
 
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<any> {
-    return this.http.get<any>(environment.api+ '/products/getAll/');
+  getAll(): Observable<ProductModel[]> {
+    return this.http.get<ProductModel[]>(environment.api+ '/products/getAll/');
   }
 }
